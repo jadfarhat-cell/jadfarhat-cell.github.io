@@ -1,6 +1,128 @@
 @import url("./0yeudqsk4m4ib.original.css");
 
-/* Keep the original portfolio design while removing unverifiable numeric skill ratings. */
+/* Preserve the original visual design while presenting verified, recruiter-ready content. */
+
+/* Remove unverifiable numeric skill ratings. */
 #skills .space-y-4 .group > .flex.justify-between.items-center > span:last-child {
   display: none !important;
+}
+
+/* Present an accurate role and summary without changing the hero layout. */
+#about h1 + div > span {
+  font-size: 0 !important;
+}
+#about h1 + div > span::before {
+  content: "Applied AI Developer";
+  font-size: clamp(1.5rem, 4vw, 2.25rem);
+}
+#about h1 + div .cursor-blink {
+  display: none !important;
+}
+#about h1 + div + p {
+  font-size: 0 !important;
+}
+#about h1 + div + p > * {
+  display: none !important;
+}
+#about h1 + div + p::after {
+  content: "Software Engineering student building applied AI systems across RAG, computer vision, and full-stack applications.";
+  display: inline;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Replace broad production/research wording with evidence-based positioning. */
+#projects .text-center > p,
+#skills .text-center > p {
+  font-size: 0 !important;
+}
+#projects .text-center > p::after {
+  content: "Applied AI projects spanning retrieval, computer vision, desktop software, and backend APIs.";
+  font-size: 1rem;
+}
+#skills .text-center > p::after {
+  content: "Hands-on development across RAG, computer vision, APIs, and full-stack AI applications.";
+  font-size: 1rem;
+}
+
+/* Shared replacement styles for project descriptions and technology lines. */
+#projects .grid > div h3 + p > span {
+  opacity: 1 !important;
+}
+#projects .grid > div h3 + p + div::after {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: #cad5e2;
+  padding: 0.4rem 0.65rem;
+  border-radius: 0.75rem;
+  background: rgba(139, 92, 246, 0.1);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+/* Document Assistant - verified local RAG implementation. */
+#projects .grid > div:nth-child(1) h3 + p > span {
+  font-size: 0 !important;
+}
+#projects .grid > div:nth-child(1) h3 + p > span::after {
+  content: "Local RAG assistant that ingests documents, creates embeddings, retrieves relevant context, and generates source-aware answers.";
+  font-size: 0.875rem;
+}
+#projects .grid > div:nth-child(1) h3 + p + div > span {
+  display: none !important;
+}
+#projects .grid > div:nth-child(1) h3 + p + div::after {
+  content: "Python · Ollama · ChromaDB · Sentence Transformers · FastAPI · Gradio";
+}
+
+/* MotionTransfer - accurately identify current implementation status. */
+#projects .grid > div:nth-child(2) .flex.items-start.justify-between.mb-4 > span:last-child {
+  font-size: 0 !important;
+}
+#projects .grid > div:nth-child(2) .flex.items-start.justify-between.mb-4 > span:last-child::after {
+  content: "WORK IN PROGRESS";
+  font-size: 0.75rem;
+}
+#projects .grid > div:nth-child(2) h3 + p > span {
+  font-size: 0 !important;
+}
+#projects .grid > div:nth-child(2) h3 + p > span::after {
+  content: "Early-stage motion-transfer project scaffold. The model, training pipeline, evaluation, and inference workflow are still under development.";
+  font-size: 0.875rem;
+}
+#projects .grid > div:nth-child(2) h3 + p + div > span {
+  display: none !important;
+}
+#projects .grid > div:nth-child(2) h3 + p + div::after {
+  content: "Python · PyTorch · Project Scaffold · Work in Progress";
+}
+
+/* MeetingMind - verified desktop prototype stack. */
+#projects .grid > div:nth-child(3) h3 + p > span {
+  font-size: 0 !important;
+}
+#projects .grid > div:nth-child(3) h3 + p > span::after {
+  content: "Electron and React meeting-assistant prototype that records microphone audio, transcribes speech, and generates summaries, action items, and follow-up drafts.";
+  font-size: 0.875rem;
+}
+#projects .grid > div:nth-child(3) h3 + p + div > span {
+  display: none !important;
+}
+#projects .grid > div:nth-child(3) h3 + p + div::after {
+  content: "Electron · React · Whisper API · Claude API · sql.js · JavaScript";
+}
+
+/* Face Swap App - verified video-processing pipeline. */
+#projects .grid > div:nth-child(4) h3 + p > span {
+  font-size: 0 !important;
+}
+#projects .grid > div:nth-child(4) h3 + p > span::after {
+  content: "Computer-vision API that detects and replaces faces across uploaded video frames, re-encodes the result, and preserves the original audio stream.";
+  font-size: 0.875rem;
+}
+#projects .grid > div:nth-child(4) h3 + p + div > span {
+  display: none !important;
+}
+#projects .grid > div:nth-child(4) h3 + p + div::after {
+  content: "Python · FastAPI · InsightFace · OpenCV · ONNX Runtime · FFmpeg";
 }
